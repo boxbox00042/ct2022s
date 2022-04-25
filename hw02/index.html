@@ -437,6 +437,12 @@
 
 				/** autoload font data */
 				/** Your code goes here */
+				d3.request('./SourceHanSerif-Heavy.ttf')
+                    .responseType('arraybuffer')
+                    .get(function(d){
+                        openTypeFont = opentype.parse(d.response);
+                    })
+                ;
                 /***/
 
 
